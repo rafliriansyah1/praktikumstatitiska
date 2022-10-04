@@ -1,0 +1,46 @@
+a <- c(1,2,-5,0.3,6,-2,4) # numeric vector
+b <- c("one","two","three") # character vector
+c <- c(TRUE,TRUE,TRUE,FALSE,TRUE) #logical vector
+print(a)
+print(b)
+print(c)
+
+#MATRIKS
+cells <- c(3,15,-27,38)
+r_rafli <- c("R1", "R2")
+c_rafli <- c("C1", "C2") 
+rafli_matrix <- matrix(cells, nrow=2, ncol=2, byrow=TRUE,dimnames=list(r_rafli, c_rafli))
+print(rafli_matrix)
+
+rafli1 <- c(1,2,3,4)
+rafli2 <- c("red", "white", "red", NA)
+rafli3 <- c(TRUE,TRUE,TRUE,FALSE)
+dataku <- data.frame(rafli1, rafli2, rafli3)
+names(dataku) <- c("ID","Color","Passed") # variable names 
+print(dataku)
+
+data_rafli <- data.frame(id = letters[1:10], x = 1:10, y = 11:20)
+print (data_rafli)
+
+install.packages("RMySQL")
+
+library(RMySQL)
+con = dbConnect(MySQL(), user = 'root', password = '', dbname = 'houseprices', host = 'localhost')
+dbListTables(con) 
+myQuery <- "select * from rafliriansyah;"
+df <- dbGetQuery(con, myQuery)
+
+library(dplyr)
+df<-filter(df,Brick=="No")
+print(df)
+
+library(RMySQL)
+con = dbConnect(MySQL(), user = 'root', password = '', dbname = 'ps2rafli', host = 'localhost')
+dbListTables(con) 
+myQuery <- "select * from rafliriansyahh;"
+df <- dbGetQuery(con, myQuery)
+
+library(dplyr)
+df<-filter(df,Gender=="L")
+print(df)
+
