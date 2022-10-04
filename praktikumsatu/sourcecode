@@ -1,0 +1,13 @@
+data_rafli= read.delim("clipboard")
+View(data_rafli)
+mean(data_rafli$Tinggi.Badan)
+str(data_rafli)
+
+data_rafli_csv = read.csv("C:/Users/Rafli Riansyah/Documents/DOKUMEN/prak statiska/rafli_prak1 - Sheet1.csv")
+View(data_rafli_csv)
+install.packages("xlsx")
+library("xlsx")
+data_rafli_xlsx = read.xlsx("C:/Users/Rafli Riansyah/Documents/DOKUMEN/prak statiska/rafli_prak1 - Sheet1.xlsx",1)
+View(data_rafli_xlsx)
+
+
