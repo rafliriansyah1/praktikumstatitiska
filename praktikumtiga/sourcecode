@@ -1,0 +1,35 @@
+data_rafli = read.delim("clipboard")
+View(data_rafli)
+
+rafli<-data_rafli[data_rafli$Bedrooms==2,]
+View(rafli)
+
+rafli$Bathrooms<-ifelse(rafli$Bathrooms>2,c("large"),c("small"))
+View(rafli)
+
+rafli$newvariable <- ifelse(rafli$Offers > 2, c("large"), c("small")) 
+View(rafli)
+
+rafli$newvariable <- rafli$Price/rafli$SqFt
+View(rafli)
+
+rafli$newvariable<-NULL
+
+data_rafli.kolom1dan2 <- data_rafli[,1:2] 
+View(data_rafli.kolom1dan2)
+
+data_rafli.kolom3dan4 <- data_rafli[,3:4] 
+View(data_rafli.kolom3dan4)
+     
+data_rafli.kolom1sd4<-cbind(data_rafli.kolom1dan2, data_rafli.kolom3dan4) 
+View(data_rafli.kolom1sd4)
+     
+data_rafli.baris1sd3 <- data_rafli[1:3,] 
+data_rafli.baris4sd6 <- data_rafli[4:6,] 
+data_rafli.baris1sd6 <- rbind(data_rafli.baris1sd3, data_rafli.baris4sd6) 
+View(data_rafli.baris1sd6)
+
+data_rafli.sort<-data_rafli[order(data_rafli$Price),] 
+View(data_rafli.sort)
+
+
