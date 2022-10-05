@@ -1,0 +1,38 @@
+data_rafli=read.csv("C:/Users/Rafli Riansyah/OneDrive/Documents/DOKUMEN/prak statiska/data_rafli.csv")
+View(data_rafli)
+
+rafli <- data_rafli[data_rafli$tinggi.badan==175,]
+View(rafli)
+
+data_rafli$tinggi.badan <- ifelse(data_rafli$tinggi.badan > 160,c("tinggi"),c("pendek"))
+View(rafli)
+
+# MENAMBAH  VARIABEL
+data_rafli$Jurusan <- c("Informatika21")
+data_rafli$Fakultas<- c("FTI")
+View(data_rafli)
+
+# DELETE VARIABEL
+data_rafli$Fakultas<-NULL
+View(data_rafli)
+
+# MERGE DATA FRAME
+data_rafli.namagen <- data_rafli[1:2]
+View(data_rafli.namagen)
+data_rafli.namagen1 <- data_rafli[3:4]
+View(data_rafli.namagen1)
+data_rafli.gabungan<-cbind(data_rafli.namagen,data_rafli.namagen1)
+View(data_rafli.gabungan)
+
+# MERGE BARIS
+data_baris_rafli.1sampai5<-data_rafli[1:5,]
+View(data_baris_rafli.1sampai5)
+data_baris_rafli.25sampai30<-data_rafli[25:30,]
+View(data_baris_rafli.25sampai30)
+data_baris_rafli.gabungan<-
+rbind(data_baris_rafli.1sampai5,data_baris_rafli.25sampai30)
+View(data_baris_rafli.gabungan)
+
+# SORTING DATA
+data_rafli.sort<-data_rafli[order(data_rafli$waktu.perjalanan),]
+View(data_rafli.sort)
