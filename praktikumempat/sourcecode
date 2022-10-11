@@ -1,0 +1,11 @@
+Sofware RStudio =
+rafli=read.delim("clipboard")
+View(rafli)
+t.test(rafli$Volume, conf.level = 0.50)
+
+Microsoft Excel =
+Alpha = 1-D8 = 0,5
+Alpha/2	= = D9/2 = 0,25
+Tabel T	= = TINV(D9;D2-1) = 0,691196949
+Batas Bawah  = D3-D11*D4/SQRT(16) = 9,806440774
+Batas Atas =  D3+D11*D4/SQRT(16) = 9,981059226
