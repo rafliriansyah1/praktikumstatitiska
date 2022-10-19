@@ -1,0 +1,16 @@
+rafli=read.delim("clipboard")
+View(rafli)
+str(rafli)
+
+mean(rafli$Volume)
+
+t.test(rafli$Volume, mu=10)
+
+//latihan2
+rafli=read.delim("clipboard")
+View(rafli)
+str(rafli)
+
+mean(rafli$Pendapatan)
+
+t.test(rafli$Pendapatan, mu=14500)
