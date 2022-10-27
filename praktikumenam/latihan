@@ -1,0 +1,8 @@
+rafli=read.csv("C:/Users/Rafli Riansyah/Downloads/DirectMarketing.csv")
+View(rafli)
+hist(rafli$AmountSpent)
+dz=density(rafli$AmountSpent)
+plot(dz)
+
+rafli=read.csv("C:/Users/Rafli Riansyah/Downloads/Houseprices.csv")
+plot(rafli$Price, rafli$aqfT)
