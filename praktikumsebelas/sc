@@ -1,0 +1,19 @@
+df_rafli = read.delim("clipboard")
+View(df_rafli)
+head(df_rafli)
+
+model <- aov(korosi~metode, data=df_rafli)
+summary(model)
+
+tukey.test <- TukeyHSD(model)
+tukey.test
+
+#latihan kedua
+df_rafli=PlantGrowth
+View(df_rafli)
+
+model <- aov(weight~group, data=df_rafli)
+summary(model)
+
+tukey.test <- TukeyHSD(model)
+tukey.test
