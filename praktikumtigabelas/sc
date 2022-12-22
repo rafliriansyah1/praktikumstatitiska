@@ -1,0 +1,24 @@
+dataku_rafli = read.delim("clipboard")
+View(dataku_rafli)
+wilcox.test(dataku_rafli$Sebelum, dataku_rafli$Setelah,paired=TRUE)
+
+dataku_rafli = read.delim("clipboard")
+View(dataku_rafli)
+wilcox.test(dataku_rafli$Sebelum, dataku_rafli$Setelah,paired=TRUE)
+
+df_rafli=read.delim("clipboard")
+# independent 2-group Mann-Whitney U Test
+wilcox.test(df_rafli$obat~df_rafli$grup)
+# where y is numeric and A is A binary factor
+head(df_rafli)
+rank(df_rafli$obat)
+
+#latihamketiganosatu
+dataku_rafli = read.delim("clipboard")
+View(dataku_rafli)
+wilcox.test(dataku_rafli$Ganjil,dataku_rafli$Genap ,paired=TRUE)
+
+#latihanketiganodua
+dataku_rafli = read.delim("clipboard")
+View(dataku_rafli)
+wilcox.test(dataku_rafli$caffeine,dataku_rafli$placebo ,paired=TRUE)
